@@ -1,0 +1,31 @@
+POST http://localhost:3000/videos
+Content-Type: application/json
+
+{
+    "title": "Video - Ruby",
+    "description": "Este é o 4º video",
+    "duration": 25
+}
+
+###
+
+GET http://localhost:3000/
+
+###
+
+GET http://localhost:3000/videos
+
+###
+
+PUT http://localhost:3000/videos/477ae808-a52d-493a-97ba-667114a96902
+Content-Type: application/json
+
+{
+    "title": "Video - Android Nativo",
+    "description": "Este é o video Android Nativo",
+    "duration": 5677
+}
+
+###
+
+DELETE http://localhost:3000/videos/3bfe10ff-b269-4875-be7c-1d222e87ac2c

@@ -2,9 +2,12 @@
 
 Este projeto é uma replicação e estudo prático da videoaula do Diego Fernandes da [Rocketseat](https://www.rocketseat.com.br/) sobre **Node.js**, utilizando o framework **Fastify** para manipulação de rotas e integração com banco de dados **PostgreSQL**. O objetivo foi aplicar todo o conhecimento adquirido e colocar o projeto em produção utilizando os serviços da [Neon](neon.tech) para o banco de dados e [Render](render.com) para hospedar a aplicação.
 
+Além disso, adicionei o uso do ORM Sequelize para as interações com banco de dados ficarem mais tranquilas.
+
 ## 🚀 Tecnologias Utilizadas
 
 - **Node.js**: Plataforma JavaScript para backend.
+- **Sequelize**: ORM para interação com o banco de dados.
 - **Fastify**: Framework web rápido e eficiente.
 - **PostgreSQL**: Banco de dados relacional utilizado.
 - **Render/Neon**: Banco de Dados/Hospedagem.

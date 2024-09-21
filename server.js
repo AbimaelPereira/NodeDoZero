@@ -3,8 +3,14 @@ import { DatabaseMemory } from './database/database-memory.js'
 import { DatabasePostgres } from './database/database-postgres.js'
 import 'dotenv/config'
 
+import sequelize from './database/db.js';
+
+
 
 const server = fastify()
+
+// Após a definição do servidor
+await sequelize.sync(); // Sincroniza os modelos com o banco de dados
 
 let database
 const environment = process.env.ENVIRONMENT

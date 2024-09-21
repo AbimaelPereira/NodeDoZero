@@ -1,18 +1,21 @@
-import 'dotenv/config'
-import postgres from "postgres"
+// database/db.js
+import 'dotenv/config';
+import { Sequelize } from 'sequelize';
 
-let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
-
-const sql = postgres({
-  host: PGHOST,
-  database: PGDATABASE,
-  username: PGUSER,
-  password: PGPASSWORD,
-  port: 5432,
-  ssl: 'require',
-  connection: {
-    options: `project=${ENDPOINT_ID}`,
-  },
+const sequelize = new Sequelize({
+    host: process.env.PGHOST,
+    database: process.env.PGDATABASE,
+    username: process.env.PGUSER,
+    password: process.env.PGPASSWORD,
+    port: 5432,
+    dialect: 'postgres',
+    dialectOptions: {
+        ssl: {
+            require: true,
+        },
+        options: `project=${process.env.ENDPOINT_ID}`, // Adicione aqui
+    },
+    logging: false
 });
 
-export default sql
+export default sequelize;
