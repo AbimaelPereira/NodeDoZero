@@ -15,3 +15,7 @@ Este projeto é uma replicação e estudo prático da videoaula do Diego Fernand
 2. Instale as dependencias ```npm i```
 3. Configure o arquivo ```.env```
 4. Rode o projeto com ```npm run dev```
+
+## 🌐 Deploy
+
+A aplicação está hospedada e pode ser acessada [aqui](https://nodedozero-jv0q.onrender.com/).
