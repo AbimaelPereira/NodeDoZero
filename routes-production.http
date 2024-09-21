@@ -1,0 +1,31 @@
+POST https://nodedozero-jv0q.onrender.com/videos
+Content-Type: application/json
+
+{
+    "title": "Video - PHP",
+    "description": "Este é o 2º video",
+    "duration": 400
+}
+
+###
+
+GET https://nodedozero-jv0q.onrender.com
+
+###
+
+GET https://nodedozero-jv0q.onrender.com/videos
+
+###
+
+PUT https://nodedozero-jv0q.onrender.com/videos/3bfe10ff-b269-4875-be7c-1d222e87ac2c
+Content-Type: application/json
+
+{
+    "title": "Video - React",
+    "description": "Este é o video sobre React",
+    "duration": 400
+}
+
+###
+
+DELETE https://nodedozero-jv0q.onrender.com/videos/74e6376c-b3b2-4450-ab65-f624302c17d9

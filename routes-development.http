@@ -1,4 +1,4 @@
-POST https://nodedozero-jv0q.onrender.com/videos
+POST http://localhost:3000/videos
 Content-Type: application/json
 
 {
@@ -9,11 +9,15 @@ Content-Type: application/json
 
 ###
 
-GET https://nodedozero-jv0q.onrender.com/videos
+GET http://localhost:3000/
 
 ###
 
-PUT https://nodedozero-jv0q.onrender.com/videos/3bfe10ff-b269-4875-be7c-1d222e87ac2c
+GET http://localhost:3000/videos
+
+###
+
+PUT http://localhost:3000/videos/3bfe10ff-b269-4875-be7c-1d222e87ac2c
 Content-Type: application/json
 
 {
@@ -24,4 +28,4 @@ Content-Type: application/json
 
 ###
 
-DELETE https://nodedozero-jv0q.onrender.com/videos/74e6376c-b3b2-4450-ab65-f624302c17d9
+DELETE http://localhost:3000/videos/74e6376c-b3b2-4450-ab65-f624302c17d9

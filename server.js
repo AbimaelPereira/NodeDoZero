@@ -1,13 +1,39 @@
 import { fastify } from 'fastify'
-// import { DatabaseMemory } from './database-memory.js'
-import { DatabasePostgres } from './database-postgres.js'
+import { DatabaseMemory } from './database/database-memory.js'
+import { DatabasePostgres } from './database/database-postgres.js'
 import 'dotenv/config'
 
 
 const server = fastify()
 
-// const database = new DatabaseMemory()
-const database = new DatabasePostgres()
+let database
+const environment = process.env.ENVIRONMENT
+
+console.log("ENVIRONMENT: " + environment);
+
+if (environment == 'DEVELOPMENT') {
+    database = new DatabaseMemory()
+    console.log("DATABASE: Memory");
+} else if (environment == 'PRODUCTION') {
+    console.log("DATABASE: PostgreSQL");
+    database = new DatabasePostgres()
+} else {
+    console.log(`Ambiente desconhecido: ${environment}. Usando banco de dados de memória como fallback.`);
+    console.log("DATABASE: Memory");
+    database = new DatabaseMemory();
+}
+
+server.get('/', async (request, reply) => {
+    return reply.send({
+        message: '🌟 Bem-vindo à API de Vídeos! 🎥',
+        routes: {
+            'GET /videos': '📄 Lista todos os vídeos, com opção de pesquisa por título',
+            'POST /videos': '➕ Cria um novo vídeo (campos: title, description, duration)',
+            'PUT /videos/:id': '✏️ Atualiza um vídeo existente (campos: title, description, duration)',
+            'DELETE /videos/:id': '🗑️ Deleta um vídeo existente pelo ID'
+        }
+    })
+})
 
 server.post('/videos', async (request, replay) => {
     const { title, description, duration } = request.body
