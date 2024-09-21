@@ -1,6 +1,6 @@
 # Node.js Videoaula Replication
 
-Este projeto é uma replicação e estudo prático da videoaula do Diego Fernandes da [Rocketseat](https://www.rocketseat.com.br/) sobre **Node.js**, utilizando o framework **Fastify** para manipulação de rotas e integração com banco de dados **PostgreSQL**. O objetivo foi aplicar todo o conhecimento adquirido e colocar o projeto em produção utilizando os serviços da [Neon](neon.tech) para o banco de dados e [Render](render.com) para hospedar a aplicação.
+Este projeto é uma replicação e estudo prático da videoaula do Diego Fernandes da [Rocketseat](https://www.rocketseat.com.br/) sobre **Node.js**, utilizando o framework **Fastify** para manipulação de rotas e integração com banco de dados **PostgreSQL**. O objetivo foi aplicar todo o conhecimento adquirido e colocar o projeto em produção utilizando os serviços da [Neon](https://neon.tech/) para o banco de dados e [Render](https://render.com/) para hospedar a aplicação.
 
 ## 🚀 Tecnologias Utilizadas
 
